@@ -1,0 +1,224 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
+import '/index.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'homeoptions_model.dart';
+export 'homeoptions_model.dart';
+
+class HomeoptionsWidget extends StatefulWidget {
+  const HomeoptionsWidget({
+    super.key,
+    this.fileupload,
+  });
+
+  final FFUploadedFile? fileupload;
+
+  static String routeName = 'Homeoptions';
+  static String routePath = '/homeoptions';
+
+  @override
+  State<HomeoptionsWidget> createState() => _HomeoptionsWidgetState();
+}
+
+class _HomeoptionsWidgetState extends State<HomeoptionsWidget> {
+  late HomeoptionsModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => HomeoptionsModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        appBar: AppBar(
+          backgroundColor: FlutterFlowTheme.of(context).primary,
+          automaticallyImplyLeading: false,
+          title: Align(
+            alignment: AlignmentDirectional(0, 0),
+            child: Text(
+              FFLocalizations.of(context).getText(
+                'cua738m8' /* Welcome to Studyhelp!! */,
+              ),
+              style: FlutterFlowTheme.of(context).titleLarge.override(
+                    font: GoogleFonts.interTight(
+                      fontWeight:
+                          FlutterFlowTheme.of(context).titleLarge.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).titleLarge.fontStyle,
+                    ),
+                    letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).titleLarge.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).titleLarge.fontStyle,
+                  ),
+            ),
+          ),
+          actions: [
+            InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                context.pushNamed(DashboardWidget.routeName);
+              },
+              child: Icon(
+                Icons.person_rounded,
+                color: FlutterFlowTheme.of(context).primaryText,
+                size: 44,
+              ),
+            ),
+          ],
+          centerTitle: false,
+          elevation: 2,
+        ),
+        body: SafeArea(
+          top: true,
+          child: Align(
+            alignment: AlignmentDirectional(0, 0),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Align(
+                  alignment: AlignmentDirectional(0, 0),
+                  child: Container(
+                    width: 494.32,
+                    height: 711.7,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                    ),
+                    child: Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Container(
+                        width: double.infinity,
+                        height: 329.7,
+                        child: CarouselSlider(
+                          items: [
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed(TodooooWidget.routeName);
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1518976024611-28bf4b48222e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxOHx8dG8lMjBkb3xlbnwwfHx8fDE3NTAxODE2NTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+                                  width: 200,
+                                  height: 200,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context
+                                    .pushNamed(Home17CalendarWidget.routeName);
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1560420025-9453f02b4751?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxM3x8Y2FsZW5kYXJ8ZW58MHx8fHwxNzUwMTgxNjA5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+                                  width: 200,
+                                  height: 125.4,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context
+                                    .pushNamed(Details15TimerWidget.routeName);
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1616957348089-3814b5e9c5aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxNnx8dGltZXJ8ZW58MHx8fHwxNzUwMTc5OTk1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+                                  width: 200,
+                                  height: 200,
+                                  fit: BoxFit.cover,
+                                  alignment: Alignment(0, 0),
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed(MygeminiWidget.routeName);
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1589254065909-b7086229d08c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxNHx8cm9ib3R8ZW58MHx8fHwxNzUwNTA4ODMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
+                                  width: 200,
+                                  height: 104.1,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                          carouselController: _model.carouselController ??=
+                              CarouselSliderController(),
+                          options: CarouselOptions(
+                            initialPage: 1,
+                            viewportFraction: 0.5,
+                            disableCenter: true,
+                            enlargeCenterPage: true,
+                            enlargeFactor: 0.25,
+                            enableInfiniteScroll: true,
+                            scrollDirection: Axis.horizontal,
+                            autoPlay: false,
+                            onPageChanged: (index, _) =>
+                                _model.carouselCurrentIndex = index,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
