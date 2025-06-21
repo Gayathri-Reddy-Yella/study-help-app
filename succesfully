@@ -1,0 +1,480 @@
+import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
+import 'dart:ui';
+import '/index.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'successfully_model.dart';
+export 'successfully_model.dart';
+
+class SuccessfullyWidget extends StatefulWidget {
+  const SuccessfullyWidget({super.key});
+
+  static String routeName = 'successfully';
+  static String routePath = '/successfully';
+
+  @override
+  State<SuccessfullyWidget> createState() => _SuccessfullyWidgetState();
+}
+
+class _SuccessfullyWidgetState extends State<SuccessfullyWidget>
+    with TickerProviderStateMixin {
+  late SuccessfullyModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => SuccessfullyModel());
+
+    animationsMap.addAll({
+      'containerOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 1.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0, 1.396),
+            end: Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation1': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 100.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0, 1.396),
+            end: Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 100.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation2': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 150.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 150.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 150.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 150.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0, 1.396),
+            end: Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 150.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation3': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 225.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 225.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 225.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 225.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0, 1.396),
+            end: Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 225.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'textOnPageLoadAnimation4': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 250.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0, 1.396),
+            end: Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'buttonOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 250.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.8, 0.8),
+            end: Offset(1.0, 1.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.873, 0),
+            end: Offset(0, 0),
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 250.0.ms,
+            duration: 300.0.ms,
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+    });
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        appBar: AppBar(
+          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          automaticallyImplyLeading: false,
+          actions: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 8, 16, 8),
+              child: FlutterFlowIconButton(
+                borderColor: FlutterFlowTheme.of(context).alternate,
+                borderRadius: 12,
+                borderWidth: 1,
+                buttonSize: 40,
+                fillColor: FlutterFlowTheme.of(context).primaryBackground,
+                icon: Icon(
+                  Icons.close_rounded,
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  size: 24,
+                ),
+                onPressed: () async {
+                  context.pushNamed(HomeoptionsWidget.routeName);
+                },
+              ),
+            ),
+          ],
+          centerTitle: false,
+          elevation: 0,
+        ),
+        body: SafeArea(
+          top: true,
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(16, 16, 24, 12),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 44, 0, 0),
+                  child: Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).accent2,
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).accent2,
+                        width: 4,
+                      ),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(8),
+                      child: Container(
+                        width: 140,
+                        height: 140,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).secondary,
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: FlutterFlowTheme.of(context).accent2,
+                            width: 4,
+                          ),
+                        ),
+                        child: Icon(
+                          Icons.check_rounded,
+                          color: FlutterFlowTheme.of(context).info,
+                          size: 64,
+                        ),
+                      ),
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation']!),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 44, 0, 0),
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      'vk2gqgiu' /* Succesfully Logged in! */,
+                    ),
+                    style: FlutterFlowTheme.of(context).headlineSmall.override(
+                          font: GoogleFonts.montserrat(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .headlineSmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .headlineSmall
+                                .fontStyle,
+                          ),
+                          letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .fontStyle,
+                        ),
+                  ).animateOnPageLoad(
+                      animationsMap['textOnPageLoadAnimation1']!),
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'oaxi6rmt' /* You’re in! Ready to level up y... */,
+                  ),
+                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                        font: GoogleFonts.montserrat(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .fontStyle,
+                        ),
+                        letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                      ),
+                ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation2']!),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    '4aa81tm7' /* Contact For Help */,
+                  ),
+                  textAlign: TextAlign.end,
+                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                        font: GoogleFonts.montserrat(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .fontWeight,
+                          fontStyle: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .fontStyle,
+                        ),
+                        letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).labelMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).labelMedium.fontStyle,
+                      ),
+                ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation3']!),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    '5cd24ptq' /* helpers123@gmail.com */,
+                  ),
+                  textAlign: TextAlign.end,
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.montserrat(
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                        color: FlutterFlowTheme.of(context).primary,
+                        letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation4']!),
+                Spacer(),
+                Align(
+                  alignment: AlignmentDirectional(0, 0),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed(HomeoptionsWidget.routeName);
+                      },
+                      text: FFLocalizations.of(context).getText(
+                        'r6p1bu9j' /* Continue */,
+                      ),
+                      options: FFButtonOptions(
+                        width: double.infinity,
+                        height: 44,
+                        padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  font: GoogleFonts.montserrat(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
+                        elevation: 3,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ).animateOnPageLoad(
+                        animationsMap['buttonOnPageLoadAnimation']!),
+                  ),
+                ),
+              ].divide(SizedBox(height: 8)),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
