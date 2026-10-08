@@ -16,7 +16,7 @@ dependencies:
   cloud_firestore: 5.5.0
   cloud_firestore_platform_interface: 6.5.0
   cloud_firestore_web: 4.3.4
-  collection: 1.19.0
+  collection: 1.19.1
   equatable: 2.0.5
   firebase_auth: 5.3.3
   firebase_auth_platform_interface: 7.4.9
@@ -89,11 +89,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  assets:
-    - assets/images/
-    - assets/videos/
-    - assets/audios/
-    - assets/rive_animations/
-    - assets/pdfs/
-    - assets/jsons/
-  
+
